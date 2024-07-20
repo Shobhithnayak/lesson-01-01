@@ -18,6 +18,4 @@ jobs:
     steps:
       - name: Step One
         uses: actions/checkout@v4
-      - name: Step two
-        run: "Get-ChildItem Env | Sort-Object Name"
 
