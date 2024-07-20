@@ -12,11 +12,12 @@ jobs:
       - name: Step two
         run: env | sort
   Job2:
+    needs: job1
     name: Second Job
     runs-on: windows-latest
     steps:
       - name: Step One
         uses: actions/checkout@v4
       - name: Step two
-        run: Get-ChildItem env
+        run: "Get-ChildItem Env | Sort-Object Name"
 
